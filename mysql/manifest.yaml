@@ -26,6 +26,7 @@ spec:
       containers:
       - name: mysql
         image: joindevops/mysql:v1.0
+        #mysql not having http thats the reason we are checking tcp port, initial deley we should give and period seconds also
         readinessProbe:
           tcpSocket:
             port: 3306

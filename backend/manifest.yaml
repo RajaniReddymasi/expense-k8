@@ -49,6 +49,7 @@ spec:
           httpGet:
             path: /health
             port: 8080
+            #filure throshold is 2, if container fails 2 times then it will restart the container,initial deley given 30s so it will not create pod in 30s
           failureThreshold: 2
           periodSeconds: 5
           initialDelaySeconds: 30
